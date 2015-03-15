@@ -1,0 +1,1 @@
+TweenMax.to(".superman", 3, {left:"600px"});
