@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>GreenSock: Basic Tween</title>
+         
+        <style>
+        body{
+            background-color:#000;
+        }
+        #demo {
+            width: 1300px;
+            height: 60px;
+            background-color: #fff;
+            padding: 8px;
+        }
+        #logo {
+            position: relative;
+            width: 250px;
+            height: 200px;
+            background: url(img/super.jpg) no-repeat;
+        }
+        .box {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin-left: 10px;
+            float: left;
+        }
+        #red {
+            background-color: red;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        #green {
+            background-color: green;
+        }
+        </style>
+    </head>
+ 
+    <body>
+        <div id="demo">
+            <div class="box" id="red" class="box"></div>
+            <div class="box" id="yellow" class="box"></div>
+            <div class="box" id="green" class="box"></div>
+        </div>
+     
+        <!--- The following scripts are necessary to do TweenLite tweens on CSS properties -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenLite.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/plugins/CSSPlugin.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> 
+         
+        <script>
+        //we'll use a window.onload for simplicity, but typically it is best to use either jQuery's $(document).ready() or $(window).load() or cross-browser event listeners so that you're not limited to one.
+        $(document).ready(function() {
+            TweenLite.to($(".box"), 1, {scale:0.2, opacity: 0.3});
+        });
+
+        </script>
+     
+    </body>
+</html>
